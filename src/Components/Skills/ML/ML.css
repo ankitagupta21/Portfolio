@@ -1,0 +1,37 @@
+.m{
+  margin-bottom: 10vw;
+}
+.m-heading{
+  margin-top: -1.8vw;
+}
+  .m-image{
+      margin-top: 40px;
+      width: 36vw;
+      margin-left: -10px;
+  }
+  .m-right{
+      margin-left: 6vw;
+  }
+  .m-image{
+      display: flex;
+      flex-direction: row;
+      margin-top: 8vw;
+  }
+  .image-1{
+     width:14vw;
+     height:14vw;
+     margin-top: -5vw;
+     margin-left: -0.8vw;
+  }
+  .image-2{
+    width:16vw;
+    height:12vw;
+    margin-top: 9vw;
+    margin-left: -2vw;
+  }
+  .image-3{
+    width:12vw;
+    height:12vw;
+    margin-top: -7vw;
+    margin-left: -8vw;
+  }

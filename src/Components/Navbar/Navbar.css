@@ -1,0 +1,133 @@
+.n-wrapper{
+    height: 4vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 4vw;
+}
+.n-left{
+    display: flex;
+    align-items: center;
+}
+.n-right{
+    display:flex;
+    align-items: center;
+}
+.menu-icon{
+    display: none;
+}
+.menu{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 6vw;
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6vw;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+.menu-item.work{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-item.work{
+  justify-content: center;
+}
+.menu-links.work text{
+  margin-right: 10px;
+}
+.menu-links {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-links:hover {
+    color: var(--gray);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+.fa-bars{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 750px){
+    .NavbarItems {
+      position: relative;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      width: 52%;
+      position: absolute;
+      top: 10vw;
+      right: -100%;
+      margin-right: 3vw;
+      opacity: 1;
+      transition: all 0.5s ease;
+      font-size: 3vw;
+      padding: 2vw;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      gap:3vw;
+    }
+    
+      .menu.active {
+        background: #000000;
+        border-width: 2px;
+        border-style: solid;
+        border-color: white;
+        right: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+
+      .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .menu-item.work{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .menu-links {
+        text-align: center;
+        padding: 1rem;
+        width: 90%;
+        display: table;
+      }
+
+      .menu-links:hover {
+        background-color: white;
+        border-radius: 20px;
+        color: black;
+      }
+
+      .menu-icon {
+        display: block;
+        transform: translate(-100%, 60%);
+        cursor: pointer;
+        margin-right: -3vw;
+      }
+    
+      .fa-times {
+        color: #fff;
+        font-size: 5vw;
+      }
+
+      .fa-bars {
+        color: #fff;
+        font-size: 5vw;
+      }
+    
+}

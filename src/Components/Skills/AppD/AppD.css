@@ -1,0 +1,33 @@
+.a-heading{
+  margin-top: 4vw;
+}
+.a-image{
+    margin-top: 40px;
+    width: 36vw;
+    margin-left: -10px;
+}
+.an-image{
+    margin-bottom: -4px;
+    margin-left: 1.2vw;
+    width:12vw;
+}
+.a-right{
+    margin-left: 6vw;
+}
+.a-image{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8vw;
+}
+.f-image{
+    margin-top: 1.8vw;
+    width: 10vw;
+    height: 16vw;
+    margin-left: 20px;
+}
+.r-image{
+    margin-top: -5vw;
+    width: 14vw;
+    height: 14vw;
+    margin-left:3vw;
+}

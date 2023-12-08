@@ -1,0 +1,9 @@
+.h-container{
+    background-image: url(../../img/style.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:top;
+    background-color: var(--black);
+    padding: 3vw 4vw;
+margin-top: -10vw;    
+  }

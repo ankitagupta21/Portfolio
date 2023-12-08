@@ -1,0 +1,115 @@
+:root
+{
+  --red:#FC2323;
+  --green:#17D64D;
+  --yellow: #F3E036;
+  --orange : #FCA61F;
+  --black : #000000;
+  --gray : #999999;
+  --white : #FFFFFF;
+  --blueCard : #DDF8FE;
+  --purple: rgb(238 210 255);
+  --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+.App{
+  color: var(--white);
+  background-color: var(--black);
+  font-family: 'Inter', sans-serif;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('../src/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: local('Montserrat'), url('../src/fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  src: local('Inconsolata'), url('../src/fonts/Inconsolata/static/Inconsolata-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inconsolata-Medium';
+  src: local('Inconsolata'), url('../src/fonts/Inconsolata/static/Inconsolata-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: local('Inconsolata'), url('../src/fonts/Inter/static/Inter-Bold.ttf') format('truetype');
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  margin: 15vw 2vw;
+  justify-content: space-between;
+}
+
+.box1{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2vw;
+  height: auto;
+  padding-bottom: 2vw;
+}
+
+.box2{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-style: solid;
+  height:4.5vw;
+  align-items: flex-start;
+}
+
+.red{
+  background-color: var(--red);
+  width: 1.6vw;
+  height: 1.6vw;
+  border-radius: 0.8vw;
+  align-self: center;
+  margin: 0vw 2vw 0px 2.5vw;
+}
+.yellow{
+  background-color: var(--yellow);
+  width: 1.6vw;
+  height: 1.6vw;
+  border-radius: 0.8vw;
+  align-self: center;
+  margin-right: 2vw;
+}
+.green{
+  background-color: var(--green);
+  width: 1.6vw;
+  height: 1.6vw;
+  border-radius: 0.8vw;
+  align-self: center;
+}
+.para{
+  font-family: "Inconsolata-Medium", monospace;
+  font-size: 2.4vw;
+  color: #fff;
+  padding:2vw 2.5vw 1vw 2.5vw;
+  line-height: 1.5;
+}
+.s-heading{
+  font-family: "Montserrat-Medium",sans-serif;
+  font-size: 4vw;
+  color: #fff;
+}
+.more{
+  font-family: "Montserrat-Medium", sans-serif;
+  margin-top: 3vw;
+  font-size: 2.5vw;
+}
+
+
+  
+
+  
