@@ -7,6 +7,7 @@
 .n-left{
     display: flex;
     align-items: center;
+    visibility: hidden;
 }
 .n-right{
     display:flex;
@@ -56,14 +57,12 @@
 }
 
 @media screen and (max-width: 750px){
-    .NavbarItems {
-      position: relative;
-    }
+    
     .menu {
       display: flex;
       flex-direction: column;
       width: 52%;
-      position: absolute;
+      position: fixed;
       top: 10vw;
       right: -100%;
       margin-right: 3vw;

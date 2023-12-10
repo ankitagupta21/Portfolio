@@ -6,12 +6,8 @@ import Design from "../Components/Skills/Design/Design";
 import ML from "../Components/Skills/ML/ML";
 
 function WebD() {
-  useEffect(() => {
-    document.body.style.backgroundColor = "#000089";
-  }, []);
   return (
     <div>
-      <Intro />
       <Web />
       <AppD />
       <Design />

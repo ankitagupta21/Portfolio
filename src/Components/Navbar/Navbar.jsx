@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
+import Footer from "../Footer/Footer";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = React.useState(true);
@@ -33,7 +34,11 @@ const Navbar = () => {
             </a>
           </li>
           <li className="menu-item">
-            <a href="/" className="menu-links">
+            <a
+              href="https://drive.google.com/file/d/1skRm4QfiugGtF-pMU6n5TW5dz6PDYQKf/view?usp=sharing"
+              className="menu-links"
+              target="_blank"
+            >
               Resume
             </a>
           </li>
@@ -47,7 +52,7 @@ const Navbar = () => {
             {dropdown && <Dropdown className="dropdown-s" />}
           </li>
           <li className="menu-item">
-            <a href="/" className="menu-links" onClick={closeMobileMenu}>
+            <a href="#contact" className="menu-links" onClick={closeMobileMenu}>
               Contact
             </a>
           </li>

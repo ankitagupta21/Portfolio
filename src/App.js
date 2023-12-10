@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./Screens/Home/Home";
 import WebD from "./Screens/WebD";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/work/WebDevelopment" element={<WebD />}></Route>
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
