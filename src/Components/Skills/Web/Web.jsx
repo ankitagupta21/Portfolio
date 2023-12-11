@@ -3,7 +3,12 @@ import "./Web.css";
 import "../../../App.css";
 import wd from "../../../img/wd.png";
 
+import { useLocation } from "react-router-dom";
+
 const Web = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  const hide = path === "/work/WebDevelopment" ? "hide" : "more";
   return (
     <div className="container">
       <div className="w-left">
@@ -25,7 +30,9 @@ const Web = () => {
             Build web applications using MERN stack and Flask framework.
           </div>
         </div>
-        <div className="more">Show More</div>
+        <div className={hide}>
+          <a href="/work/WebDevelopment">Show More</a>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,15 @@
 import React from "react";
-import "./AppD.css";
+import "./App.css";
 import "../../../App.css";
 import flutter from "../../../img/Flutter.png";
 import react from "../../../img/React.png";
 import android from "../../../img/android.png";
+import { useLocation } from "react-router-dom";
 
-const AppD = () => {
+const App = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  const hide = path === "/work/AppDevelopment" ? "hide" : "more";
   return (
     <div className="container">
       <div className="a-left">
@@ -27,7 +31,9 @@ const AppD = () => {
             authentication.
           </div>
         </div>
-        <div className="more">Show More</div>
+        <div className={hide}>
+          <a href="/work/AppDevelopment">Show More</a>
+        </div>
       </div>
       <div className="a-right">
         <div className="s-heading a-heading">App Development</div>
@@ -40,4 +46,4 @@ const AppD = () => {
   );
 };
 
-export default AppD;
+export default App;

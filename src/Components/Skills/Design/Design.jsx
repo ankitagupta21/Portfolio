@@ -1,8 +1,13 @@
 import React from "react";
 import "./Design.css";
 import design from "../../../img/design.png";
+import { useLocation } from "react-router-dom";
 
 const Design = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  const hide = path === "/work/UIUXDesign" ? "hide" : "more";
+
   return (
     <div className="container">
       <div className="d-left">
@@ -25,7 +30,9 @@ const Design = () => {
             usability testing.
           </div>
         </div>
-        <div className="more">Show More</div>
+        <div className={hide}>
+          <a href="/work/UIUXDesign">Show More</a>
+        </div>
       </div>
     </div>
   );

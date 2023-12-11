@@ -1,0 +1,58 @@
+.sub-container1.p{
+    margin-bottom: 0vw;
+}
+.project{
+    font-family: "Inconsolata-Medium", monospace;
+    color: #fff;
+    z-index:1;
+    margin-bottom: 10vw;
+}
+.p-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p-headl{
+    display: flex;
+    align-items: center;
+}
+.p-name{
+    font-size: 2.5vw;
+    font-family: "Montserrat-Medium",sans-serif;
+}
+.p-link{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1vw;
+    font-size: 2vw;
+}
+.p-date{
+    font-size: 2vw;
+}
+.p-subhead{
+    font-size: 2.5vw;
+}
+.p-para{
+    font-size: 2vw;
+    font-family: "Inconsolata-Medium", monospace;
+    line-height: 1.5;
+}
+.skill.p{
+    background-color: rgba(86,120,242,0.3);
+    border:1px solid rgb(86,120,242);
+    margin-bottom: 1vw;
+}
+.p-contributors{
+    font-size: 2.5vw;
+    font-family: "Montserrat-Medium",sans-serif;
+}
+.p-contributors-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.p-contributors-list a{
+    color: #fff;
+    margin-right: 1vw;
+    font-size: 2vw;
+}

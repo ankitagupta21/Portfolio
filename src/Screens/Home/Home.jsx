@@ -1,7 +1,7 @@
 import React from "react";
 import Intro from "../../Components/Intro/Intro";
 import Web from "../../Components/Skills/Web/Web";
-import AppD from "../../Components/Skills/AppD/AppD";
+import App from "../../Components/Skills/App/App";
 import Design from "../../Components/Skills/Design/Design";
 import ML from "../../Components/Skills/ML/ML";
 import "./Home.css";
@@ -12,7 +12,7 @@ function Home() {
     <div className="h-container">
       <Intro />
       <Web />
-      <AppD />
+      <App />
       <Design />
       <ML />
     </div>

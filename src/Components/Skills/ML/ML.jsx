@@ -4,8 +4,12 @@ import "../../../App.css";
 import ML1 from "../../../img/ML1.png";
 import ML2 from "../../../img/ML2.png";
 import ML3 from "../../../img/ML3.png";
+import { useLocation } from "react-router-dom";
 
 const ML = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  const hide = path === "/work/MachineLearning" ? "hide" : "more";
   return (
     <div className="container m">
       <div className="m-left">
@@ -24,7 +28,9 @@ const ML = () => {
             Machine Learning.
           </div>
         </div>
-        <div className="more">Show More</div>
+        <div className={hide}>
+          <a href="/work/MachineLearning">Show More</a>
+        </div>
       </div>
       <div className="m-right">
         <div className="s-heading m-heading">Machine Learning</div>

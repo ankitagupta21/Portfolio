@@ -1,5 +1,6 @@
 import React from "react";
 import "./Dropdown.css";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -27,7 +28,7 @@ const items = [
     cName: "dropdown-link",
   },
 ];
-const Dropdown = () => {
+const Dropdown = ({ onPress }) => {
   const [click, setClick] = React.useState(false);
   const handleClick = () => setClick(!click);
   return (
@@ -37,10 +38,10 @@ const Dropdown = () => {
     >
       {items.map((item) => {
         return (
-          <li key={item.id}>
-            <a href={item.path} className={item.cName}>
+          <li key={item.id} onClick={onPress}>
+            <Link to={item.path} className={item.cName}>
               {item.title}
-            </a>
+            </Link>
           </li>
         );
       })}

@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     padding: 3vw 4vw;
+    position: relative;
+    z-index:1;
 }
 .n-left{
     display: flex;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
-import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = React.useState(true);
@@ -14,6 +14,7 @@ const Navbar = () => {
   };
   const handleWorkClick = () => {
     setDropdown(!dropdown);
+    console.log(dropdown);
   };
   return (
     <nav className="n-wrapper">
@@ -29,9 +30,9 @@ const Navbar = () => {
         </div>
         <ul className={click ? "menu active" : "menu"}>
           <li className="menu-item">
-            <a href="/" className="menu-links" onClick={closeMobileMenu}>
+            <Link to="/" className="menu-links" onClick={closeMobileMenu}>
               Home
-            </a>
+            </Link>
           </li>
           <li className="menu-item">
             <a
@@ -49,7 +50,9 @@ const Navbar = () => {
                 className={dropdown ? "fas fa-angle-up" : "fas fa-angle-down"}
               />
             </div>
-            {dropdown && <Dropdown className="dropdown-s" />}
+            {dropdown && (
+              <Dropdown className="dropdown-s" onPress={handleWorkClick} />
+            )}
           </li>
           <li className="menu-item">
             <a href="#contact" className="menu-links" onClick={closeMobileMenu}>
