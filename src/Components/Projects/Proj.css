@@ -1,11 +1,11 @@
 .sub-container1.p{
-    margin-bottom: 0vw;
+    margin-top: 0vw;
 }
 .project{
     font-family: "Inconsolata-Medium", monospace;
     color: #fff;
     z-index:1;
-    margin-bottom: 10vw;
+    margin: 10vw 0vw 0vw 0vw;
 }
 .p-head{
     display: flex;

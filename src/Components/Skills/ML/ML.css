@@ -35,3 +35,12 @@
     margin-top: -7vw;
     margin-left: -8vw;
   }
+  .image-1:hover{
+      transform: scale(1.1);
+  }
+  .image-2:hover{
+      transform: scale(1.1);
+  }
+  .image-3:hover{
+      transform: scale(1.1);
+  }

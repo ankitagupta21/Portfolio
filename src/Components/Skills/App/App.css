@@ -31,3 +31,10 @@
     height: 14vw;
     margin-left:3vw;
 }
+
+.f-image:hover{
+    transform: scale(1.1);
+}
+.r-image:hover{
+    transform: scale(1.1);
+}

@@ -6,3 +6,6 @@
     width: 36vw;
     margin-left: -2vw;
 }
+.w-image:hover{
+    transform: scale(1.1);
+}
