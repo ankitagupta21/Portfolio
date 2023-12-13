@@ -23,7 +23,7 @@ const projects = [
     id: 2,
     name: "Web Scraping IMDb",
     subHead: "Web scraping of IMDb website to extract movie data",
-    link: "https://drive.google.com/file/d/1rQUfcRAxBRNGjrT6HAz17q6QwSwm0N8N/view?usp=sharing",
+    link: "https://colab.research.google.com/drive/1ylgzglcdob8wzy_zQplxKcPCm9ztzOrr?usp=sharing",
     desc: ["Utilized Python's BeautifulSoup library to scrape IMDb website."],
     skills: ["Python", "BeautifulSoup"],
     date: "March 2023",

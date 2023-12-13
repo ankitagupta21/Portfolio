@@ -55,7 +55,7 @@ const certificates = [
     name: "Flutter & Dart - The Complete Guide [2023 Edition]",
     link: "https://www.udemy.com/certificate/UC-f2e636ef-a548-4266-92f0-c92ea6753027/",
     date: "March 2023",
-    organisation: "Udemy",
+    organization: "Udemy",
     skills: ["Flutter", "Dart"],
   },
 ];
