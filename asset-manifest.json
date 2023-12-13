@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.0dd4221a.css",
+    "main.js": "/Portfolio/static/js/main.9564841d.js",
+    "static/media/Inter-Bold.ttf": "/Portfolio/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
+    "static/media/sq1.png": "/Portfolio/static/media/sq1.fa1fadfb79617b01cc85.png",
+    "static/media/design1.png": "/Portfolio/static/media/design1.0e538d8427dd6e06b36d.png",
+    "static/media/sq2.png": "/Portfolio/static/media/sq2.d8b125f7c54a69cc9d65.png",
+    "static/media/Montserrat-Medium.ttf": "/Portfolio/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
+    "static/media/Montserrat-Regular.ttf": "/Portfolio/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "static/media/sq22.png": "/Portfolio/static/media/sq22.e940a1fa35903f9067a2.png",
+    "static/media/design2.png": "/Portfolio/static/media/design2.73d8cbf8a356b536ab4b.png",
+    "static/media/style.png": "/Portfolio/static/media/style.f510de054a08396dca06.png",
+    "static/media/Inconsolata-Medium.ttf": "/Portfolio/static/media/Inconsolata-Medium.77a917ae515cdcbb5732.ttf",
+    "static/media/Inconsolata-Regular.ttf": "/Portfolio/static/media/Inconsolata-Regular.54748073d423bc6646f7.ttf",
+    "static/media/design.png": "/Portfolio/static/media/design.00904693fe25fc2bf9ca.png",
+    "static/media/wd.png": "/Portfolio/static/media/wd.0a5544c2d56e625be6e2.png",
+    "static/media/sq12.png": "/Portfolio/static/media/sq12.cc1241b5661917fcf28b.png",
+    "static/media/React.png": "/Portfolio/static/media/React.8023be460a328b4c5ae4.png",
+    "static/media/sq13.png": "/Portfolio/static/media/sq13.3b8775d3448aa387e9e5.png",
+    "static/media/android.png": "/Portfolio/static/media/android.43edfef0072fa8c76d7e.png",
+    "static/media/Flutter.png": "/Portfolio/static/media/Flutter.f47a256f4c72181a3b33.png",
+    "static/media/ML2.png": "/Portfolio/static/media/ML2.328fe672408918786243.png",
+    "static/media/ML1.png": "/Portfolio/static/media/ML1.68722e713095a8305834.png",
+    "index.html": "/Portfolio/index.html",
+    "main.0dd4221a.css.map": "/Portfolio/static/css/main.0dd4221a.css.map",
+    "main.9564841d.js.map": "/Portfolio/static/js/main.9564841d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dd4221a.css",
+    "static/js/main.9564841d.js"
+  ]
+}
