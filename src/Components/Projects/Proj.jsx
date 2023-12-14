@@ -13,15 +13,17 @@ const Proj = ({ projects }) => {
             <div className="project">
               <div className="p-head">
                 <div className="p-headl">
-                  <p className="p-name">{project.name}</p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-link"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
+                  <p className="p-name">
+                    {project.name}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </p>
                 </div>
 
                 <p className="p-date">{project.date}</p>

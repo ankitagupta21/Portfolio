@@ -10,7 +10,9 @@ const Footer = () => {
         <p className="f-heading">Contact Me.</p>
         <p className="f-para">
           Get in touch or send me an email directly on{" "}
-          <b>iankitagupta02@gmail.com</b>.
+          <a href="mailto:iankitagupta02@gmail.com" className="f-email">
+            iankitagupta02@gmail.com
+          </a>
         </p>
       </div>
 

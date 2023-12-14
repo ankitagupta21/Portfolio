@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ML from "../../Components/Skills/ML/ML";
 import "./MLS.css";
 import Proj from "../../Components/Projects/Proj";
+import Cer from "../../Components/Certificates/Certificate";
 import sq13 from "../../img/sq13.png";
 import sq2 from "../../img/sq2.png";
 
@@ -17,7 +18,7 @@ const projects = [
       "Evaluated and contrasted the results of four classification models.",
     ],
     skills: ["Python", "scikit-learn"],
-    date: "May 2023 - August 2023",
+    date: "May 2023-Aug 2023",
   },
   {
     id: 2,
@@ -26,9 +27,28 @@ const projects = [
     link: "https://colab.research.google.com/drive/1ylgzglcdob8wzy_zQplxKcPCm9ztzOrr?usp=sharing",
     desc: ["Utilized Python's BeautifulSoup library to scrape IMDb website."],
     skills: ["Python", "BeautifulSoup"],
-    date: "March 2023",
+    date: "Mar 2023",
   },
 ];
+
+const certificates = [
+  {
+    id: 1,
+    name: "BSc (Programming and Data Science)",
+    link: "",
+    date: "2020-Present",
+    organization: "Indian Institute of Technology, Madras",
+    skills: [
+      "Python",
+      "Machine Learning",
+      "Statistics",
+      "Probability",
+      "Linear Algebra",
+      "Tools in Data Science",
+    ],
+  },
+];
+
 function MLS() {
   return (
     <div className="sub-container ml">
@@ -36,6 +56,7 @@ function MLS() {
       <img src={sq2} className="sq2 ml" />
       <ML />
       <Proj projects={projects} />
+      <Cer certificates={certificates} ml="true" />
     </div>
   );
 }

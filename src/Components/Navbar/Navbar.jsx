@@ -7,6 +7,27 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = React.useState(true);
   const [dropdown, setDropdown] = React.useState(false);
   const [click, setClick] = React.useState(false);
+  const iconRef = React.useRef();
+  const workRef = React.useRef();
+  const dropdownMenuRef = React.useRef();
+  const dropdownRef = React.useRef();
+
+  window.addEventListener("click", (e) => {
+    if (
+      iconRef.current &&
+      !iconRef.current.contains(e.target) &&
+      !workRef.current.contains(e.target)
+    ) {
+      setClick(false);
+    }
+    if (
+      dropdownMenuRef.current &&
+      !dropdownMenuRef.current.contains(e.target)
+    ) {
+      console.log(dropdownMenuRef.current);
+      setDropdown(false);
+    }
+  });
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const onMouseEnter = () => {
@@ -14,7 +35,10 @@ const Navbar = () => {
   };
   const handleWorkClick = () => {
     setDropdown(!dropdown);
-    console.log(dropdown);
+  };
+  const handlePageChange = () => {
+    setClick(false);
+    setDropdown(false);
   };
   return (
     <nav className="n-wrapper">
@@ -25,10 +49,10 @@ const Navbar = () => {
       </div>
 
       <div className="n-right">
-        <div className="menu-icon" onClick={handleClick}>
+        <div className="menu-icon" onClick={handleClick} ref={iconRef}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
-        <ul className={click ? "menu active" : "menu"}>
+        <ul className={click ? "menu active" : "menu"} ref={dropdownMenuRef}>
           <li className="menu-item">
             <Link to="/" className="menu-links" onClick={closeMobileMenu}>
               Home
@@ -43,16 +67,19 @@ const Navbar = () => {
               Resume
             </a>
           </li>
-          <li className="menu-item work" onMouseEnter={onMouseEnter}>
-            <div className="menu-links work" onClick={handleWorkClick}>
+          <li
+            className="menu-item work"
+            onClick={handleWorkClick}
+            onMouseEnter={onMouseEnter}
+            ref={workRef}
+          >
+            <div className="menu-links work">
               <text>Work</text>
               <i
                 className={dropdown ? "fas fa-angle-up" : "fas fa-angle-down"}
               />
             </div>
-            {dropdown && (
-              <Dropdown className="dropdown-s" onPress={handleWorkClick} />
-            )}
+            {dropdown && <Dropdown className="dropdown-s" />}
           </li>
           <li className="menu-item">
             <a href="#contact" className="menu-links" onClick={closeMobileMenu}>

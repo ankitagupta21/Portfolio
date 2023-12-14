@@ -2,6 +2,7 @@ import React from "react";
 import "./Design.css";
 import design from "../../../img/design.png";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Design = () => {
   const location = useLocation();
@@ -31,7 +32,7 @@ const Design = () => {
           </div>
         </div>
         <div className={hide}>
-          <a href="/work/UIUXDesign">Show More</a>
+          <Link to="/work/UIUXDesign">Show More</Link>
         </div>
       </div>
     </div>

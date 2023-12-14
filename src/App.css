@@ -97,7 +97,7 @@
 }
 .para{
   font-family: "Inconsolata-Medium", monospace;
-  font-size: 2.4vw;
+  font-size: 2.5vw;
   color: #fff;
   padding:2vw 2.5vw 1vw 2.5vw;
   line-height: 1.5;
@@ -160,7 +160,8 @@
 .skill{
   border-radius: 15px;
   margin-right: 2vw;
-  font-size: 2vw;
+  margin-bottom: 2vw;
+  font-size: 2.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,10 +171,53 @@
 }
 .sq2{
   position: absolute;
-  top:160vw;
+  top:192vw;
   right:80vw;
   width: 50vw;
   z-index: -1;
 }
 
+@media screen and (max-width: 750px) {
+  .container{
+    margin:15vw 0vw;
+  }
+  .box1{
+    width:54vw;
+  }
+  .box2{
+    height:5.5vw;
+  }
+  .para{
+    font-family: "Inconsolata-Medium", monospace;
+    font-size: 3.2vw;
+    color: #fff;
+    padding:2vw 1.4vw 1vw 1.4vw;
+    line-height: 1.2;
+  }
+  .s-heading{
+    font-size: 4.2vw;
+  }
+  .more{
+    font-size: 3vw;
+  }
   
+  
+  .sub-container{
+    margin-top: -8vw;
+  }
+  .sub-container1{
+    margin: 15vw 0vw;
+  }
+  .skill{
+    margin-bottom: 2vw;
+    font-size: 3vw;
+  }
+  
+  .sq1{
+    top: 36vw;
+  }
+  .sq2{
+    top: 231vw;
+    
+  }
+}

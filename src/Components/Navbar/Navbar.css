@@ -23,8 +23,8 @@
   grid-template-columns: repeat(4, auto);
   grid-gap: 6vw;
   list-style: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.6vw;
+  
+  font-size: 1.8vw;
 }
 .menu-item {
   display: flex;
@@ -70,11 +70,11 @@
       margin-right: 3vw;
       opacity: 1;
       transition: all 0.5s ease;
-      font-size: 3vw;
+      font-size: 3.8vw;
       padding: 2vw;
       border-radius: 20px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
+      font-family: "Montserrat-Medium",sans-serif;
+      font-weight: 700;
       gap:3vw;
     }
     

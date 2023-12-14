@@ -16,3 +16,12 @@
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 750px) {
+    .box1.in{
+        width:60vw;
+    }
+    .box2.in{
+        
+    }
+}

@@ -11,7 +11,7 @@ const experience = [
     id: 1,
     company: "Kaarvaan Labs Pvt Ltd",
     title: "Web Developer Intern",
-    date: "February 2022 - April 2022",
+    date: "Feb 2022-Apr 2022",
     desc: [
       "Produced the prototype utilizing Bootstrap Studio and leveraged React.js for the website's front-end development.",
       "Exhibited self-motivation in acquiring new skills autonomously.",
@@ -32,7 +32,7 @@ const projects = [
       "Managed the back-end infrastructure using Node.js and employed MongoDB (NoSQL) for data storage.",
     ],
     skills: ["Node.js", "MongoDB", "Express.js"],
-    date: "February 2022 - March 2022",
+    date: "Feb 2022-Mar 2022",
     contributors: [
       {
         id: 1,
@@ -62,7 +62,7 @@ const projects = [
       "Stored data using SQLite and used Flask SQLAlchemy for object-relational mapping.",
     ],
     skills: ["Flask", "SQLite", "HTML", "CSS", "Bootstrap"],
-    date: "December 2021 - January 2022",
+    date: "Dec 2021-Jan 2022",
   },
 ];
 

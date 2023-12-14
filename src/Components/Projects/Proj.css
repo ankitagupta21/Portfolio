@@ -1,11 +1,11 @@
 .sub-container1.p{
-    margin-top: 0vw;
+    
 }
 .project{
     font-family: "Inconsolata-Medium", monospace;
     color: #fff;
     z-index:1;
-    margin: 10vw 0vw 0vw 0vw;
+    margin-top: 7vw;
 }
 .p-head{
     display: flex;
@@ -17,24 +17,24 @@
     align-items: center;
 }
 .p-name{
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-family: "Montserrat-Medium",sans-serif;
 }
 .p-link{
     color: #fff;
     text-decoration: none;
     margin-left: 1vw;
-    font-size: 1.8vw;
+    font-size: 2vw;
 }
 .p-date{
-    font-size: 2vw;
+    font-size: 2.5vw;
+    text-align: right;
 }
 .p-subhead{
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 .p-para{
-    font-size: 2vw;
-    font-family: "Inconsolata-Medium", monospace;
+    font-size: 2.5vw;
     line-height: 1.5;
 }
 .skill.p{
@@ -43,16 +43,42 @@
     margin-bottom: 1vw;
 }
 .p-contributors{
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-family: "Montserrat-Medium",sans-serif;
 }
 .p-contributors-list{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 10vw;
 }
 .p-contributors-list a{
     color: #fff;
     margin-right: 1vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
+}
+
+@media screen and (max-width: 750px) {
+    
+    .p-name{
+        font-size: 3.2vw;
+    }
+    .p-link{
+        font-size: 3vw;
+    }
+    .p-date{
+        font-size: 3vw;
+    }
+    .p-subhead{
+        font-size: 3.2vw;
+    }
+    .p-para{
+        font-size: 3vw;
+    }
+    .p-contributors{
+        font-size: 3.2vw;
+    }
+    .p-contributors-list a{
+        font-size: 3vw;
+    }
 }

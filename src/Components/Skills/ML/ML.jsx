@@ -5,6 +5,7 @@ import ML1 from "../../../img/ML1.png";
 import ML2 from "../../../img/ML2.png";
 import ML3 from "../../../img/ML3.png";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ML = () => {
   const location = useLocation();
@@ -29,7 +30,7 @@ const ML = () => {
           </div>
         </div>
         <div className={hide}>
-          <a href="/work/MachineLearning">Show More</a>
+          <Link to="/work/MachineLearning">Show More</Link>
         </div>
       </div>
       <div className="m-right">

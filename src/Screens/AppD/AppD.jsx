@@ -12,7 +12,7 @@ const experience = [
     id: 1,
     company: "Argyle Enigma Tech Labs",
     title: "Software Engineer Intern",
-    date: "March 2023 - September 2023",
+    date: "Mar 2023 - Sep 2023",
     desc: [
       "Constructed a React Native app for the company's latest product, Budgetalizer.",
       "Cultivated expertise in Software Development Life Cycle(SDLC) and effectively applied Scrum (Agile Framework), enhancing project delivery efficiency by 35%.",
@@ -33,7 +33,7 @@ const projects = [
       "Used Firebase for authentication and storage of data.",
     ],
     skills: ["Flutter", "Firebase"],
-    date: "March 2023",
+    date: "Mar 2023",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const projects = [
       "Provided a user-friendly interface to the user through the use of charts and graphs.",
     ],
     skills: ["Flutter"],
-    date: "February 2023",
+    date: "Feb 2023",
   },
 ];
 
@@ -54,7 +54,7 @@ const certificates = [
     id: 1,
     name: "Flutter & Dart - The Complete Guide [2023 Edition]",
     link: "https://www.udemy.com/certificate/UC-f2e636ef-a548-4266-92f0-c92ea6753027/",
-    date: "March 2023",
+    date: "Mar 2023",
     organization: "Udemy",
     skills: ["Flutter", "Dart"],
   },

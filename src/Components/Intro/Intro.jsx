@@ -9,8 +9,8 @@ const Intro = () => {
         <div>Hi, I'm Ankita</div>
         <div>A Software Engineer.</div>
       </div>
-      <div className="box1">
-        <div className="box2">
+      <div className="box1 in">
+        <div className="box2 in">
           <div className="red"></div>
           <div className="yellow"></div>
           <div className="green"></div>

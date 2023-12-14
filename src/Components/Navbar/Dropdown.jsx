@@ -28,7 +28,7 @@ const items = [
     cName: "dropdown-link",
   },
 ];
-const Dropdown = ({ onPress }) => {
+const Dropdown = () => {
   const [click, setClick] = React.useState(false);
   const handleClick = () => setClick(!click);
   return (
@@ -38,7 +38,7 @@ const Dropdown = ({ onPress }) => {
     >
       {items.map((item) => {
         return (
-          <li key={item.id} onClick={onPress}>
+          <li key={item.id}>
             <Link to={item.path} className={item.cName}>
               {item.title}
             </Link>

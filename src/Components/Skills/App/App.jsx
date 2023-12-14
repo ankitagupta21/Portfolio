@@ -5,6 +5,7 @@ import flutter from "../../../img/Flutter.png";
 import react from "../../../img/React.png";
 import android from "../../../img/android.png";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const location = useLocation();
@@ -32,7 +33,7 @@ const App = () => {
           </div>
         </div>
         <div className={hide}>
-          <a href="/work/AppDevelopment">Show More</a>
+          <Link to="/work/AppDevelopment">Show More</Link>
         </div>
       </div>
       <div className="a-right">

@@ -2,6 +2,7 @@ import React from "react";
 import "./Web.css";
 import "../../../App.css";
 import wd from "../../../img/wd.png";
+import { Link } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 
@@ -31,7 +32,7 @@ const Web = () => {
           </div>
         </div>
         <div className={hide}>
-          <a href="/work/WebDevelopment">Show More</a>
+          <Link to="/work/WebDevelopment">Show More</Link>
         </div>
       </div>
     </div>
