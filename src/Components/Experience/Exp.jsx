@@ -14,9 +14,7 @@ const Exp = ({ experience }) => {
             return (
               <div key={id} className="exp">
                 <div className="exp-top">
-                  <p className="exp-heading">
-                    <u>{company}</u>
-                  </p>
+                  <p className="exp-heading">{company}</p>
                   <p className="exp-date">{date}</p>
                 </div>
 

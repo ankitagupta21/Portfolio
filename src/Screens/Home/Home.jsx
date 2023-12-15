@@ -7,6 +7,7 @@ import sq2 from "../../img/sq2.png";
 import sq13 from "../../img/sq13.png";
 import cer from "../../img/cer.png";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const experience = [
   {
@@ -113,6 +114,29 @@ const skills = [
   "Dart",
 ];
 
+const domains = [
+  {
+    id: 1,
+    name: "Web Development",
+    link: "/work/WebDevelopment",
+  },
+  {
+    id: 2,
+    name: "App Development",
+    link: "/work/AppDevelopment",
+  },
+  {
+    id: 3,
+    name: "Machine Learning",
+    link: "/work/MachineLearning",
+  },
+  {
+    id: 4,
+    name: "UI/UX Design",
+    link: "/work/UIUXDesign",
+  },
+];
+
 function Home() {
   return (
     <div className="h-container">
@@ -131,6 +155,17 @@ function Home() {
               <div className="skills">
                 {skills.map((skill) => (
                   <div className="skill h">{skill}</div>
+                ))}
+              </div>
+            </div>
+            <div className="p-contributors">
+              <p>Domains:</p>
+              <div className="p-contributors-list">
+                {domains.map((contributor) => (
+                  <Link to={contributor.link} rel="noopener noreferrer">
+                    {contributor.name}
+                    {contributor.id !== 4 && <span> , </span>}
+                  </Link>
                 ))}
               </div>
             </div>
