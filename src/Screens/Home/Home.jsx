@@ -12,6 +12,29 @@ import { Link } from "react-router-dom";
 const experience = [
   {
     id: 1,
+    company: "Walmart Global Tech India",
+    title: "Software Engineer II",
+    date: "Aug 2024 - Present",
+    desc: [
+      "Built Power BI analytics dashboards to analyze metrics across all InfoSec products.",
+      "Developed understanding of encryption/decryption flows for Tier-0 Walmart products, supporting secure system design and compliance.",
+      "Contributing to ServiceNow development, improving operational efficiency and internal service workflows."
+    ],
+    skills: ["PowerBI", "Servicenow Devlopement", "Airflow"],
+  },
+  {
+    id: 2,
+    company: "GoodLives",
+    title: "Frontend Developer Intern",
+    date: "Mar 2024 - Jul 2024",
+    desc: [
+      "Implemented the front-end of the company's website using React.js.",
+      "Addressed bugs and optimized data loading, resulting in a 10% reduction in webpage loading time."
+    ],
+    skills: ["React.js","Version Control"],
+  },
+  {
+    id: 3,
     company: "Argyle Enigma Tech Labs",
     title: "Software Engineer Intern",
     date: "Mar 2023 - Sep 2023",
@@ -19,10 +42,10 @@ const experience = [
       "Constructed a React Native app for the company's latest product, Budgetalizer.",
       "Cultivated expertise in Software Development Life Cycle(SDLC) and effectively applied Scrum (Agile Framework), enhancing project delivery efficiency by 35%.",
     ],
-    skills: ["React Native", "Scrum", "Agile"],
+    skills: ["React Native", "Figma"],
   },
   {
-    id: 2,
+    id: 4,
     company: "Kaarvaan Labs Pvt Ltd",
     title: "Web Developer Intern",
     date: "Feb 2022-Apr 2022",
