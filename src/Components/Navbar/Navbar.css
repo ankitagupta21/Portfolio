@@ -1,15 +1,10 @@
 .n-wrapper{
     height: 4vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     padding: 3vw 4vw;
     position: relative;
     z-index:1;
-}
-.n-left{
-    display: flex;
-    align-items: center;
-    visibility: hidden;
 }
 .n-right{
     display:flex;
