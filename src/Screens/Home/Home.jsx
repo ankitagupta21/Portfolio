@@ -164,14 +164,14 @@ function Home() {
   return (
     <div className="h-container">
       <Intro />
-      <img src={sq1} className="sq1 home" />
-      <img src={sq2} className="sq2 home" />
-      <img src={sq13} className="sq1 home th" />
+      <img src={sq1} className="sq1 home" alt="" />
+      <img src={sq2} className="sq2 home" alt=""/>
+      <img src={sq13} className="sq1 home th" alt="" />
       <Exp experience={experience} />
       <Proj projects={projects} />
       {skills.length > 0 && (
         <div className="sub-container1">
-          <img src={cer} className="sub-img" />
+          <img src={cer} className="sub-img" alt="" />
           <div className="sub-right">
             <p className="sub-heading">Skills</p>
             <div>
