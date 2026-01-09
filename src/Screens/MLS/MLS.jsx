@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ML from "../../Components/Skills/ML/ML";
 import "./MLS.css";
 import Proj from "../../Components/Projects/Proj";
@@ -52,8 +52,8 @@ const certificates = [
 function MLS() {
   return (
     <div className="sub-container ml">
-      <img src={sq13} className="sq1 ml" />
-      <img src={sq2} className="sq2 ml" />
+      <img src={sq13} className="sq1 ml" alt="" />
+      <img src={sq2} className="sq2 ml" alt="" />
       <ML />
       <Proj projects={projects} />
       <Cer certificates={certificates} ml="true" />
