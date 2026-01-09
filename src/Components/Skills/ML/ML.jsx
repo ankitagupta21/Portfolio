@@ -36,9 +36,9 @@ const ML = () => {
       <div className="m-right">
         <div className="s-heading m-heading">Machine Learning</div>
         <div className="m-image">
-          <img src={ML1} className="image-1" />
-          <img src={ML2} className="image-2" />
-          <img src={ML3} className="image-3" />
+          <img src={ML1} className="image-1" alt="" />
+          <img src={ML2} className="image-2" alt="" />
+          <img src={ML3} className="image-3" alt="" />
         </div>
       </div>
     </div>
