@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./WebD.css";
 import Web from "../../Components/Skills/Web/Web";
 import Exp from "../../Components/Experience/Exp";
@@ -69,8 +69,8 @@ const projects = [
 function WebD() {
   return (
     <div className="sub-container">
-      <img src={sq1} className="sq1" />
-      <img src={sq2} className="sq2" />
+      <img src={sq1} className="sq1" alt="" />
+      <img src={sq2} className="sq2" alt="" />
       <Web />
       <Exp experience={experience} />
       <Proj projects={projects} />
