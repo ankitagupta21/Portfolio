@@ -4,13 +4,11 @@ import Dropdown from "./Dropdown";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = React.useState(true);
   const [dropdown, setDropdown] = React.useState(false);
   const [click, setClick] = React.useState(false);
   const iconRef = React.useRef();
   const workRef = React.useRef();
   const dropdownMenuRef = React.useRef();
-  const dropdownRef = React.useRef();
 
   window.addEventListener("click", (e) => {
     if (
@@ -36,10 +34,6 @@ const Navbar = () => {
   const handleWorkClick = () => {
     setDropdown(!dropdown);
   };
-  const handlePageChange = () => {
-    setClick(false);
-    setDropdown(false);
-  };
   return (
     <nav className="n-wrapper">
       <div className="n-left">
@@ -63,6 +57,7 @@ const Navbar = () => {
               href="https://drive.google.com/file/d/1skRm4QfiugGtF-pMU6n5TW5dz6PDYQKf/view?usp=sharing"
               className="menu-links"
               target="_blank"
+              rel="noreferrer"
             >
               Resume
             </a>
