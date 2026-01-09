@@ -14,7 +14,7 @@ const Web = () => {
     <div className="container">
       <div className="w-left">
         <div className="s-heading w-heading">Web Development</div>
-        <img src={wd} className="w-image" />
+        <img src={wd} className="w-image" alt="" />
       </div>
       <div className="w-right">
         <div className="box1">

@@ -13,7 +13,7 @@ const Design = () => {
     <div className="container">
       <div className="d-left">
         <div className="s-heading d-heading">UI/UX Design</div>
-        <img src={design} className="d-image" />
+        <img src={design} className="d-image" alt="" />
       </div>
       <div className="d-right">
         <div className="box1">

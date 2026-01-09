@@ -5,7 +5,7 @@ import exp from "../../img/exp.png";
 const Exp = ({ experience }) => {
   return (
     <div className="sub-container1">
-      <img src={exp} className="sub-img" />
+      <img src={exp} className="sub-img" alt="" />
       <div className="sub-right">
         <p className="sub-heading">Experience</p>
         <div>

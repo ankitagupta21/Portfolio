@@ -5,7 +5,7 @@ import pro from "../../img/pro.png";
 const Pro = ({ prototypes }) => {
   return (
     <div className="sub-container1">
-      <img src={pro} className="sub-img" />
+      <img src={pro} className="sub-img" alt="" />
       <div className="sub-right">
         <p className="sub-heading">Prototypes (hi-fi)</p>
         <div>
@@ -24,7 +24,7 @@ const Pro = ({ prototypes }) => {
               </div>
 
               <div className="p-para">
-                <img src={prototype.img} className="p-img" />
+                <img src={prototype.img} className="p-img" alt="" />
               </div>
             </div>
           ))}

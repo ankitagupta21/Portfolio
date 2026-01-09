@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="container">
       <div className="a-left">
-        <img src={android} className="an-image" />
+        <img src={android} className="an-image" alt="" />
 
         <div className="box1">
           <div className="box2">
@@ -39,8 +39,8 @@ const App = () => {
       <div className="a-right">
         <div className="s-heading a-heading">App Development</div>
         <div className="a-image">
-          <img src={flutter} className="f-image" />
-          <img src={react} className="r-image" />
+          <img src={flutter} className="f-image" alt="" />
+          <img src={react} className="r-image" alt="" />
         </div>
       </div>
     </div>

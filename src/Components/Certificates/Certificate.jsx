@@ -4,7 +4,7 @@ import cer from "../../img/cer.png";
 const Cer = ({ certificates, ml }) => {
   return (
     <div className="sub-container1 p">
-      <img src={cer} className="sub-img" />
+      <img src={cer} className="sub-img" alt="" />
       <div className="sub-right">
         {ml ? (
           <p className="sub-heading">Specialization</p>

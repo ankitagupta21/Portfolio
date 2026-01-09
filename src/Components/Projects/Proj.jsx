@@ -5,7 +5,7 @@ import proj from "../../img/proj.png";
 const Proj = ({ projects }) => {
   return (
     <div className="sub-container1 p">
-      <img src={proj} className="sub-img" />
+      <img src={proj} className="sub-img" alt="" />
       <div className="sub-right">
         <p className="sub-heading">Projects</p>
         <div>

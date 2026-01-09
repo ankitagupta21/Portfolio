@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./AppD.css";
 import App from "../../Components/Skills/App/App";
 import Exp from "../../Components/Experience/Exp";
@@ -62,8 +62,8 @@ const certificates = [
 function AppD() {
   return (
     <div className="sub-container">
-      <img src={sq1} className="sq1 app" />
-      <img src={sq2} className="sq2" />
+      <img src={sq1} className="sq1 app" alt="" />
+      <img src={sq2} className="sq2" alt="" />
       <App />
       <Exp experience={experience} />
       <Proj projects={projects} />
