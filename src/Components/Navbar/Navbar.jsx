@@ -36,11 +36,6 @@ const Navbar = () => {
   };
   return (
     <nav className="n-wrapper">
-      <div className="n-left">
-        <i
-          class={darkMode ? "fa-solid fa-toggle-on" : "fa-solid fa-toggle-off"}
-        ></i>
-      </div>
 
       <div className="n-right">
         <div className="menu-icon" onClick={handleClick} ref={iconRef}>
