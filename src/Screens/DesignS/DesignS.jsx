@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Design from "../../Components/Skills/Design/Design";
 import sq12 from "../../img/sq12.png";
 import sq22 from "../../img/sq22.png";
@@ -59,8 +59,8 @@ const certificates = [
 function DesignS() {
   return (
     <div className="sub-container">
-      <img src={sq12} className="sq1 de" />
-      <img src={sq22} className="sq2 de" />
+      <img src={sq12} className="sq1 de" alt="" />
+      <img src={sq22} className="sq2 de" alt="" />
       <Design />
       <Pro prototypes={prototypes} />
       <Cer certificates={certificates} />
