@@ -1,13 +1,18 @@
 import React from "react";
 import Intro from "../../Components/Intro/Intro";
-import Exp from "../../Components/Experience/Exp";
-import Proj from "../../Components/Projects/Proj";
+import CardSection from "../../Components/Cards/CardSection";
+import exp from "../../img/exp.png";
+import proj from "../../img/proj.png";
 import sq1 from "../../img/sq1.png";
 import sq2 from "../../img/sq2.png";
 import sq13 from "../../img/sq13.png";
 import cer from "../../img/cer.png";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { experienceCards, projectCards } from "../../Components/Cards/cardData";
+import * as web from "../WebD/WebD";
+import * as app from "../AppD/AppD";
+import * as ml from "../MLS/MLS";
+import * as design from "../DesignS/DesignS";
 
 const experience = [
   {
@@ -16,11 +21,13 @@ const experience = [
     title: "Software Engineer II",
     date: "Aug 2024 - Present",
     desc: [
-      "Built Power BI analytics dashboards to analyze metrics across all InfoSec products.",
-      "Developed understanding of encryption/decryption flows for Tier-0 Walmart products, supporting secure system design and compliance.",
-      "Contributing to ServiceNow development, improving operational efficiency and internal service workflows."
+      "Built a service-to-team search for the Infosec Support portal, using a scheduled job to index 36 team forms into a searchable table and auto-suggest the correct form when users know an app or service name but not the owning team.",
+      "Delivered ServiceNow solutions across ~6 Infosec teams, redesigning the SSH/SFTP key approval workflow to reduce mean delivery time by 18.9% and the Data Governance intake form to reduce mean delivery time by 53.5%.",
+      "Engineered a Power BI analytics dashboard for Infosec products using data from GCP and Apache Airflow.",
+      "Built an automated PR creation workflow in Payment Cryptography to update service registry files upon customer certificate renewals.",
+      "Received two internal recognition awards for rapid technology adaptation and delivery speed.",
     ],
-    skills: ["PowerBI", "Servicenow Devlopement", "Airflow"],
+    skills: ["ServiceNow", "Power BI", "GCP", "Apache Airflow"],
   },
   {
     id: 2,
@@ -28,7 +35,7 @@ const experience = [
     title: "Frontend Developer Intern",
     date: "Mar 2024 - Jul 2024",
     desc: [
-      "Implemented the front-end of the company's website using React.js.",
+      "Implemented the frontend of the company's website using React.js.",
       "Addressed bugs and optimized data loading, resulting in a 10% reduction in webpage loading time."
     ],
     skills: ["React.js","Version Control"],
@@ -40,7 +47,7 @@ const experience = [
     date: "Mar 2023 - Sep 2023",
     desc: [
       "Constructed a React Native app for the company's latest product, Budgetalizer.",
-      "Cultivated expertise in Software Development Life Cycle(SDLC) and effectively applied Scrum (Agile Framework), enhancing project delivery efficiency by 35%.",
+      "Engaged in productive collaboration with colleagues to address intricate software challenges, resulting in a 40% reduction in bug backlogs.",
     ],
     skills: ["React Native", "Figma"],
   },
@@ -48,7 +55,7 @@ const experience = [
     id: 4,
     company: "Kaarvaan Labs Pvt Ltd",
     title: "Web Developer Intern",
-    date: "Feb 2022-Apr 2022",
+    date: "Feb 2022 - Apr 2022",
     desc: [
       "Produced the prototype utilizing Bootstrap Studio and leveraged React.js for the website's front-end development.",
       "Exhibited self-motivation in acquiring new skills autonomously.",
@@ -60,13 +67,50 @@ const experience = [
 const projects = [
   {
     id: 1,
+    name: "JobTracker",
+    subHead:
+      "Self-hosted job application tracker with automatic Gmail scanning and AI classification.",
+    demo: "https://ankitagupta21.github.io/Job-Tracker/",
+    link: "https://github.com/ankitagupta21/Job-Tracker",
+    desc: [
+      "Built a full-stack, self-hosted application using Spring Boot, React, PostgreSQL, and Apache Kafka, orchestrated via Docker Compose across 5 containerized services.",
+      "Designed an email-classification pipeline using a local LLM (Ollama) to detect job application status changes from Gmail, replacing brittle keyword matching with semantic filtering and keeping email content on-device for privacy.",
+      "Implemented Gmail OAuth2 with incremental scan tracking and converted the frontend into an installable PWA.",
+    ],
+    skills: [
+      "Spring Boot",
+      "React",
+      "PostgreSQL",
+      "Apache Kafka",
+      "Docker",
+      "Ollama",
+      "OAuth2",
+    ],
+    date: "Jun 2026 - Present",
+  },
+  {
+    id: 2,
+    name: "Sentiment Prediction of Movie Reviews",
+    subHead: "ML model to predict the sentiment of the review text.",
+    link: "https://www.kaggle.com/code/ankitagupta20/sentiment-analysis-of-movie-reviews",
+    desc: [
+      "Built a sentiment classification model on the IMDb dataset (50K reviews) using Python and Scikit-learn, with tokenization, stop-word removal, and TF-IDF vectorization.",
+      "Compared Logistic Regression, SVM, Random Forest, and Naive Bayes using F1-score and precision-recall metrics; Logistic Regression achieved 87% accuracy.",
+    ],
+    skills: ["Python", "Scikit-learn", "NLP"],
+    date: "May 2023 - Aug 2023",
+  },
+  {
+    id: 5,
     name: "MedEasy",
     subHead:
       "A web platform that allows people to donate unused medicines to those in need.",
-    link: "https://medeasy.aditisahu6.repl.co/",
-    desc: [],
+    demo: "https://medeasy-aixe.onrender.com/",
+    desc: [
+      "Played a pivotal role as a back-end developer in a team project.",
+      "Managed the back-end infrastructure using Node.js and employed MongoDB (NoSQL) for data storage.",
+    ],
     skills: ["Node.js", "MongoDB", "Express.js"],
-    date: "Feb 2022-Mar 2022",
     contributors: [
       {
         id: 1,
@@ -86,79 +130,146 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "Flash Card Application",
     subHead:
       "A web platform to make virtual flashcards for effective memorization of topics.",
     link: "https://github.com/ankitagupta21/Flash-Card",
     desc: [],
     skills: ["Flask", "SQLite", "HTML", "CSS", "Bootstrap"],
-    date: "Dec 2021-Jan 2022",
-  },
-  {
-    id: 3,
-    name: "Chat App",
-    subHead:
-      "An application for a group of people to have a conversation with each other.",
-    link: "https://github.com/ankitagupta21/Chat-App",
-    desc: [],
-    skills: ["Flutter", "Firebase"],
-    date: "Mar 2023",
-  },
-  {
-    id: 4,
-    name: "Sentiment Prediction of Movie Reviews",
-    subHead: "ML model to predict the sentiment of the review text",
-    link: "https://www.kaggle.com/code/ankitagupta20/sentiment-analysis-of-movie-reviews",
-    desc: [],
-    skills: ["Python", "scikit-learn"],
-    date: "May 2023-Aug 2023",
+    date: "Dec 2021 - Jan 2022",
   },
 ];
 
 const skills = [
-  "C++",
-  "React Native",
-  "UI/UX Design",
-  "Python Development (Flask)",
-  "Machine Learning",
-  "SQL",
-  "HTML",
-  "CSS",
-  "Javascript",
-  "Node.js",
-  "React.js",
-  "Express.js",
-  "MongoDB",
-  "Git",
-  "Linux",
-  "Figma",
-  "Flutter",
-  "Dart",
-];
-
-const domains = [
   {
     id: 1,
-    name: "Web Development",
-    link: "/work/WebDevelopment",
+    group: "Languages",
+    items: ["Java", "JavaScript", "Python", "SQL", "C++"],
   },
   {
     id: 2,
-    name: "App Development",
-    link: "/work/AppDevelopment",
+    group: "Frontend",
+    items: ["React.js", "React Native", "HTML", "CSS"],
   },
   {
     id: 3,
-    name: "Machine Learning",
-    link: "/work/MachineLearning",
+    group: "Backend & Databases",
+    items: [
+      "Spring Boot",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "PostgreSQL",
+      "MongoDB",
+    ],
   },
   {
     id: 4,
-    name: "UI/UX Design",
-    link: "/work/UIUXDesign",
+    group: "Data & AI/ML",
+    items: [
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "NLP",
+      "LLM Integration (Ollama)",
+      "Power BI",
+      "Apache Airflow",
+    ],
+  },
+  {
+    id: 5,
+    group: "Tools & Platforms",
+    items: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Apache Kafka",
+      "ServiceNow",
+      "GCP",
+      "Linux",
+    ],
   },
 ];
+
+const education = [
+  {
+    id: 1,
+    name: "B.Tech (Computer Science and Engineering)",
+    organization: "JSS Academy of Technical Education, Noida",
+    date: "Oct 2020 - Jun 2024",
+    grade: "CGPA: 8.4/10",
+    coursework: [
+      "Design and Analysis of Algorithms",
+      "Data Structures and Algorithms",
+      "Object Oriented Programming",
+      "Operating System",
+      "Database Management System",
+      "Computer Networks",
+    ],
+  },
+  {
+    id: 2,
+    name: "Diploma (Programming and Data Science)",
+    organization: "Indian Institute of Technology, Madras",
+    date: "Nov 2020 - Dec 2023",
+    grade: "CGPA: 7.7/10",
+    coursework: [
+      "Mathematics",
+      "Statistics",
+      "Machine Learning",
+      "System Commands",
+    ],
+  },
+];
+
+const count = (items, singular, plural = `${singular}s`) =>
+  items.length ? `${items.length} ${items.length === 1 ? singular : plural}` : null;
+const uniqueSkills = (...groups) => [
+  ...new Set(groups.flat().flatMap((item) => item.skills || [])),
+];
+
+// Summaries of the Work pages, counted from each page's own data.
+const areas = [
+  {
+    id: 1,
+    title: "Web Development",
+    to: "/explore/WebDevelopment",
+    note: [count(web.experience, "internship"), count(web.projects, "project")],
+    skills: uniqueSkills(web.projects, web.experience),
+  },
+  {
+    id: 2,
+    title: "App Development",
+    to: "/explore/AppDevelopment",
+    note: [
+      count(app.experience, "internship"),
+      count(app.projects, "project"),
+      count(app.certificates, "certification"),
+    ],
+    skills: uniqueSkills(app.projects, app.experience, app.certificates),
+  },
+  {
+    id: 3,
+    title: "AI & Machine Learning",
+    to: "/explore/MachineLearning",
+    note: [
+      count(ml.projects, "project"),
+      ml.certificates.length ? "IIT Madras coursework" : null,
+    ],
+    skills: uniqueSkills(ml.projects),
+  },
+  {
+    id: 4,
+    title: "UI/UX Design",
+    to: "/explore/UIUXDesign",
+    note: [
+      count(design.prototypes, "prototype"),
+      count(design.certificates, "certification"),
+    ],
+    skills: ["Figma", "Wireframing", "Prototyping", "UX Research"],
+  },
+].map((area) => ({ ...area, note: area.note.filter(Boolean).join(" · ") }));
 
 function Home() {
   return (
@@ -167,34 +278,39 @@ function Home() {
       <img src={sq1} className="sq1 home" alt="" />
       <img src={sq2} className="sq2 home" alt=""/>
       <img src={sq13} className="sq1 home th" alt="" />
-      <Exp experience={experience} />
-      <Proj projects={projects} />
-      {skills.length > 0 && (
-        <div className="sub-container1">
-          <img src={cer} className="sub-img" alt="" />
-          <div className="sub-right">
-            <p className="sub-heading">Skills</p>
-            <div>
-              <div className="skills">
-                {skills.map((skill) => (
-                  <div className="skill h">{skill}</div>
-                ))}
-              </div>
-            </div>
-            <div className="p-contributors">
-              <p>Domains:</p>
-              <div className="p-contributors-list">
-                {domains.map((contributor) => (
-                  <Link to={contributor.link} rel="noopener noreferrer">
-                    {contributor.name}
-                    {contributor.id !== 4 && <span> , </span>}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <CardSection
+        heading="Experience"
+        icon={exp}
+        cards={experienceCards(experience)}
+      />
+      <CardSection
+        heading="Projects"
+        icon={proj}
+        cards={projectCards(projects)}
+      />
+      <CardSection heading="Explore by Area" icon={proj} cards={areas} />
+      <CardSection
+        heading="Skills"
+        icon={cer}
+        expandable={false}
+        cards={skills.map((category) => ({
+          id: category.id,
+          title: category.group,
+          skills: category.items,
+        }))}
+      />
+      <CardSection
+        heading="Education"
+        icon={cer}
+        cards={education.map((item) => ({
+          id: item.id,
+          title: item.organization,
+          subtitle: item.name,
+          date: item.date,
+          note: item.grade,
+          sections: [{ label: "Coursework", items: item.coursework }],
+        }))}
+      />
     </div>
   );
 }

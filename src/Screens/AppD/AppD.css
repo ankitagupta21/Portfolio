@@ -1,9 +1,9 @@
 .sq1.app{
-    top:30vw;
+    top:calc(30 * var(--vw));
 }
 
 @media screen and (max-width: 750px) {
     .sq1.app{
-        top:45vw;
+        top:calc(45 * var(--vw));
     }
 }

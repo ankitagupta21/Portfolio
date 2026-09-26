@@ -1,20 +1,23 @@
 .f-wrapper{
     background-color: #030303;
+    /* The page is capped at --max-width; paint the background out to the screen edges, content stays aligned. */
+    box-shadow: 0 0 0 100vmax #030303;
+    clip-path: inset(0 -100vmax);
     color: #fff;
-    padding: 5vw;
-    height: 20vw;
+    padding: calc(5 * var(--vw));
+    height: calc(20 * var(--vw));
     margin-top: 5vh;
 }
 .f-heading{
     font-family: "Montserrat-Medium",sans-serif;
-    font-size: 4vw;
+    font-size: calc(4 * var(--vw));
     color: #fff;
     margin:0;
-    margin-bottom: 2vw;
+    margin-bottom: calc(2 * var(--vw));
 }
 .f-para{
     font-family: "Montserrat-Regular",sans-serif;
-    font-size: 2.5vw;
+    font-size: calc(2.5 * var(--vw));
     color: #fff;
     margin:0;
 }
@@ -23,28 +26,28 @@
     color: #fff;
 }
 .s-icons a{
-    margin-right: 2vw;
+    margin-right: calc(2 * var(--vw));
     text-decoration: none ;
     color: #fff;
 }
 .s-icons{
-    margin-top: 6vw;
+    margin-top: calc(6 * var(--vw));
 }
 .s-icon{
-    font-size: 3.5vw;
+    font-size: calc(3.5 * var(--vw));
 }
 
 @media screen and (max-width: 750px) {
     .f-wrapper{
-        height: 28vw;
+        height: calc(28 * var(--vw));
     }
     .f-heading{
-        font-size: 5vw;
+        font-size: calc(5 * var(--vw));
         text-align: center;
     }
     .f-para{
-        font-size: 3.2vw;
-        line-height: 5.5vw;
+        font-size: calc(3.2 * var(--vw));
+        line-height: calc(5.5 * var(--vw));
         text-align: center;
     }
     .s-icons{
@@ -54,7 +57,7 @@
         justify-content: center;
     }
     .s-icon{
-        font-size: 5vw;
-        margin-right: 3vw;
+        font-size: calc(5 * var(--vw));
+        margin-right: calc(3 * var(--vw));
     }
 }

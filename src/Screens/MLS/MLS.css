@@ -1,12 +1,11 @@
 .sub-container.ml{
-    margin-top: -10vw;
+    margin-top: calc(-10 * var(--vw));
 }
 .sq1.ml{
-    top:38vw;
-    left:80vw;
-    width:20vw;
+    top:calc(38 * var(--vw));
+    width:calc(20 * var(--vw));
 }
 .sq2.ml{
-    top:94vw;
-    right:80vw;
+    top:calc(94 * var(--vw));
+    right:calc(80 * var(--vw));
 }

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const ML = () => {
   const location = useLocation();
   const path = location.pathname;
-  const hide = path === "/work/MachineLearning" ? "hide" : "more";
+  const hide = path === "/explore/MachineLearning" ? "hide" : "more";
   return (
     <div className="container m">
       <div className="m-left">
@@ -21,20 +21,20 @@ const ML = () => {
             <div className="green"></div>
           </div>
           <div className="para">
-            Proficient in Python libraries such as NumPy, Pandas, Matplotlib,
-            Scikit-learn, etc.
+            Integrating local LLMs (Ollama) into applications for semantic
+            classification, keeping user data on-device.
           </div>
           <div className="para">
-            Knowledge of Linear Algebra, Probability and Statistics required for
-            Machine Learning.
+            Classic ML with Python: NumPy, Pandas, Scikit-learn, NLP, and model
+            evaluation.
           </div>
         </div>
         <div className={hide}>
-          <Link to="/work/MachineLearning">Show More</Link>
+          <Link to="/explore/MachineLearning">Show More</Link>
         </div>
       </div>
       <div className="m-right">
-        <div className="s-heading m-heading">Machine Learning</div>
+        <div className="s-heading m-heading">AI &amp; Machine Learning</div>
         <div className="m-image">
           <img src={ML1} className="image-1" alt="" />
           <img src={ML2} className="image-2" alt="" />

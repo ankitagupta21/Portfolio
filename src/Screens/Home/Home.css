@@ -1,29 +1,50 @@
 .h-container{
-    background-image: url(../../img/style.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position:top;
     background-color: var(--black);
-    padding: 3vw 4vw;
-    margin-top: -10vw;  
+    padding: calc(3 * var(--vw)) calc(4 * var(--vw));
+    margin-top: calc(-10 * var(--vw));  
     position: relative; 
     z-index:0; 
+    /* Decorations may bleed sideways off-screen, but must never make the page longer. */
+    overflow-y: clip;
   }
+.h-container::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../../img/style.png) no-repeat top / 100%;
+    z-index: -1;
+    pointer-events: none;
+    animation: float-soft 10s ease-in-out infinite alternate;
+}
+@keyframes float-soft{
+    from{
+        transform: translateY(-8px);
+    }
+    to{
+        transform: translateY(8px);
+    }
+}
+@media (prefers-reduced-motion: reduce){
+    .h-container::before{
+        animation: none;
+    }
+}
+/* Past the max page width the artwork no longer reaches the screen edge, so fade it out. */
+@media screen and (min-width: 1281px) {
+    .h-container::before{
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+        mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    }
+}
 
 .sq1.home{
-    top:78vw;
-    left:70vw;
-    width:30vw;
+    top:calc(78 * var(--vw));
+    width:calc(30 * var(--vw));
 }
 .sq2.home{
-    top:200vw;
+    top:calc(200 * var(--vw));
 }
 .sq1.home.th{
-   top:380vw;
-   left:80vw;
-   width:20vw
-}
-.skill.h{
-    background-color: rgba(53,126,245,0.3);
-    border:1px solid rgb(53,126,245,0.8);
+   top:calc(300 * var(--vw));
+   width:calc(20 * var(--vw))
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 
 const Footer = () => {
@@ -30,13 +30,6 @@ const Footer = () => {
           rel="noreferrer"
         >
           <FaSquareGithub className="s-icon" />
-        </a>
-        <a
-          href="https://www.instagram.com/ankitagupta_20/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaInstagramSquare className="s-icon" />
         </a>
       </div>
     </footer>

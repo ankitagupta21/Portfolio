@@ -1,27 +1,91 @@
 .intro{
     display: flex;
-    margin-top: 10vw;
+    margin-top: calc(10 * var(--vw));
     flex-direction: column;
     align-items: center;
 }
 
 .i-name{
-    font-size: 7vw;
+    font-size: calc(6 * var(--vw));
     color: #fff;
-    margin-bottom: 8vw;
+    margin-bottom: calc(8 * var(--vw));
     font-family: 'Montserrat', sans-serif;
-    width:50vw;
-    padding-left: 3vw;
+    font-weight: normal;
+    margin-top: 0;
+    /* Shrink to the longest line so the block centers while lines stay left-aligned. */
+    width: fit-content;
+    white-space: nowrap;
     justify-content: center;
     display: flex;
     flex-direction: column;
 }
 
+.i-row,
+.i-line{
+    display: block;
+}
+.i-ghost{
+    visibility: hidden;
+}
+.i-caret{
+    display: inline-block;
+    width: 0;
+    height: 0.9em;
+    border-right: 0.03em solid #fff;
+    margin-right: -0.03em;
+    vertical-align: -0.05em;
+    animation: i-blink 1s step-end infinite;
+}
+@keyframes i-blink{
+    50%{
+        opacity: 0;
+    }
+}
+
+.box1.in{
+    width: calc(64 * var(--vw));
+}
+
+.i-actions{
+    display: flex;
+    gap: calc(2 * var(--vw));
+    margin-top: calc(4 * var(--vw));
+}
+.i-button{
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: calc(1.8 * var(--vw));
+    color: #fff;
+    text-decoration: none;
+    padding: calc(1 * var(--vw)) calc(2.5 * var(--vw));
+    border: 2px solid #fff;
+    border-radius: 999px;
+    transition: all 0.2s ease-out;
+}
+.i-button:hover{
+    background-color: #fff;
+    color: var(--black);
+}
+.i-button.primary{
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+.i-button.primary:hover{
+    background-color: #fff;
+    border-color: #fff;
+}
+
 @media screen and (max-width: 750px) {
     .box1.in{
-        width:60vw;
+        width:calc(76 * var(--vw));
     }
-    .box2.in{
-        
+    .i-line{
+        display: inline;
+    }
+    .i-actions{
+        gap: calc(3 * var(--vw));
+    }
+    .i-button{
+        font-size: calc(3.2 * var(--vw));
+        padding: calc(2 * var(--vw)) calc(4 * var(--vw));
     }
 }

@@ -4,13 +4,13 @@
     background: black;
     width: "20%";
     position: absolute;
-    top: 8vw;
-    right:14vw;
+    top: calc(8 * var(--vw));
+    right:calc(14 * var(--vw));
     list-style: none;
     text-align: start;
     border-radius: 20px;
     border: 2px solid white;
-    padding: 2vw;
+    padding: calc(2 * var(--vw));
   }
   
   .dropdown-menu li {
@@ -38,8 +38,8 @@
 @media screen and (max-width: 750px){
     .dropdown-menu{
         list-style: none;
-        padding: 2vw;
-        margin-bottom: -2vw;
+        padding: calc(2 * var(--vw));
+        margin-bottom: calc(-2 * var(--vw));
     }
     
     .dropdown-menu li{

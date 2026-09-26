@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const App = () => {
   const location = useLocation();
   const path = location.pathname;
-  const hide = path === "/work/AppDevelopment" ? "hide" : "more";
+  const hide = path === "/explore/AppDevelopment" ? "hide" : "more";
   return (
     <div className="container">
       <div className="a-left">
@@ -33,7 +33,7 @@ const App = () => {
           </div>
         </div>
         <div className={hide}>
-          <Link to="/work/AppDevelopment">Show More</Link>
+          <Link to="/explore/AppDevelopment">Show More</Link>
         </div>
       </div>
       <div className="a-right">

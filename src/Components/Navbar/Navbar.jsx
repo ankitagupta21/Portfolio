@@ -10,22 +10,25 @@ const Navbar = () => {
   const workRef = React.useRef();
   const dropdownMenuRef = React.useRef();
 
-  window.addEventListener("click", (e) => {
-    if (
-      iconRef.current &&
-      !iconRef.current.contains(e.target) &&
-      !workRef.current.contains(e.target)
-    ) {
-      setClick(false);
-    }
-    if (
-      dropdownMenuRef.current &&
-      !dropdownMenuRef.current.contains(e.target)
-    ) {
-      console.log(dropdownMenuRef.current);
-      setDropdown(false);
-    }
-  });
+  React.useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (
+        iconRef.current &&
+        !iconRef.current.contains(e.target) &&
+        !workRef.current.contains(e.target)
+      ) {
+        setClick(false);
+      }
+      if (
+        dropdownMenuRef.current &&
+        !dropdownMenuRef.current.contains(e.target)
+      ) {
+        setDropdown(false);
+      }
+    };
+    window.addEventListener("click", handleOutsideClick);
+    return () => window.removeEventListener("click", handleOutsideClick);
+  }, []);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const onMouseEnter = () => {
@@ -64,7 +67,7 @@ const Navbar = () => {
             ref={workRef}
           >
             <div className="menu-links work">
-              <text>Work</text>
+              <span>Explore</span>
               <i
                 className={dropdown ? "fas fa-angle-up" : "fas fa-angle-down"}
               />

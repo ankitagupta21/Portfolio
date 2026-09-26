@@ -6,14 +6,41 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Ankita Gupta — Software Engineer II at Walmart Global Tech. Full-stack development with React, React Native, Node.js, Spring Boot, and LLM-integrated applications."
     />
+    <meta property="og:title" content="Ankita Gupta — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer II at Walmart Global Tech. Full-stack, mobile, and AI-integrated applications."
+    />
+    <meta property="og:url" content="https://ankitagupta21.github.io/Portfolio" />
+    <meta property="og:type" content="website" />
+    <script>
+      // Restores the path that public/404.html moved into the query string.
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
     <script src="https://kit.fontawesome.com/24219b8a4b.js" crossorigin="anonymous"></script>
     <style>
       body{
         margin:0;
         height: 100%;
         background-color: #121212;
+        overflow-x: hidden;
       }
     </style>
     <!--
@@ -29,7 +56,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Ankita</title>
+    <title>Ankita Gupta — Software Engineer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

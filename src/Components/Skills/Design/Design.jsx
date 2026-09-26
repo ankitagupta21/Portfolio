@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Design = () => {
   const location = useLocation();
   const path = location.pathname;
-  const hide = path === "/work/UIUXDesign" ? "hide" : "more";
+  const hide = path === "/explore/UIUXDesign" ? "hide" : "more";
 
   return (
     <div className="container">
@@ -32,7 +32,7 @@ const Design = () => {
           </div>
         </div>
         <div className={hide}>
-          <Link to="/work/UIUXDesign">Show More</Link>
+          <Link to="/explore/UIUXDesign">Show More</Link>
         </div>
       </div>
     </div>

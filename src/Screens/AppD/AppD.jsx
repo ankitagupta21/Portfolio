@@ -1,13 +1,19 @@
 import React from "react";
+import CardSection from "../../Components/Cards/CardSection";
+import {
+  certificateCards,
+  experienceCards,
+  projectCards,
+} from "../../Components/Cards/cardData";
+import exp from "../../img/exp.png";
+import proj from "../../img/proj.png";
+import cer from "../../img/cer.png";
 import "./AppD.css";
 import App from "../../Components/Skills/App/App";
-import Exp from "../../Components/Experience/Exp";
-import Proj from "../../Components/Projects/Proj";
-import Cer from "../../Components/Certificates/Certificate";
 import sq1 from "../../img/sq1.png";
 import sq2 from "../../img/sq2.png";
 
-const experience = [
+export const experience = [
   {
     id: 1,
     company: "Argyle Enigma Tech Labs",
@@ -15,13 +21,13 @@ const experience = [
     date: "Mar 2023 - Sep 2023",
     desc: [
       "Constructed a React Native app for the company's latest product, Budgetalizer.",
-      "Cultivated expertise in Software Development Life Cycle(SDLC) and effectively applied Scrum (Agile Framework), enhancing project delivery efficiency by 35%.",
+      "Engaged in productive collaboration with colleagues to address intricate software challenges, resulting in a 40% reduction in bug backlogs.",
     ],
-    skills: ["React Native", "Scrum", "Agile"],
+    skills: ["React Native", "Figma"],
   },
 ];
 
-const projects = [
+export const projects = [
   {
     id: 1,
     name: "Chat App",
@@ -49,7 +55,7 @@ const projects = [
   },
 ];
 
-const certificates = [
+export const certificates = [
   {
     id: 1,
     name: "Flutter & Dart - The Complete Guide [2023 Edition]",
@@ -65,9 +71,13 @@ function AppD() {
       <img src={sq1} className="sq1 app" alt="" />
       <img src={sq2} className="sq2" alt="" />
       <App />
-      <Exp experience={experience} />
-      <Proj projects={projects} />
-      <Cer certificates={certificates} />
+      <CardSection heading="Experience" icon={exp} cards={experienceCards(experience)} />
+      <CardSection heading="Projects" icon={proj} cards={projectCards(projects)} />
+      <CardSection
+        heading="Certifications"
+        icon={cer}
+        cards={certificateCards(certificates)}
+      />
     </div>
   );
 }

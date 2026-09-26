@@ -1,10 +1,10 @@
 .d-heading{
-    margin-top: -1.8vw;
+    margin-top: calc(-1.8 * var(--vw));
 }
 .d-image{
-   margin-top: 4vw;
-   width: 26vw;
-   margin-left: 2vw;
+   margin-top: calc(4 * var(--vw));
+   width: calc(26 * var(--vw));
+   margin-left: calc(2 * var(--vw));
 }
 .d-image:hover{
     transform: scale(1.1);

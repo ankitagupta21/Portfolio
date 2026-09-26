@@ -6,25 +6,25 @@ const items = [
   {
     id: 1,
     title: "Web Development",
-    path: "/work/WebDevelopment",
+    path: "/explore/WebDevelopment",
     cName: "dropdown-link",
   },
   {
     id: 2,
     title: "App Development",
-    path: "/work/AppDevelopment",
+    path: "/explore/AppDevelopment",
     cName: "dropdown-link",
   },
   {
     id: 3,
-    title: "UI/UX Design",
-    path: "/work/UIUXDesign",
+    title: "AI & Machine Learning",
+    path: "/explore/MachineLearning",
     cName: "dropdown-link",
   },
   {
     id: 4,
-    title: "Machine Learning",
-    path: "/work/MachineLearning",
+    title: "UI/UX Design",
+    path: "/explore/UIUXDesign",
     cName: "dropdown-link",
   },
 ];
@@ -39,7 +39,12 @@ const Dropdown = () => {
       {items.map((item) => {
         return (
           <li key={item.id}>
-            <Link to={item.path} className={item.cName}>
+            <Link
+              to={item.path}
+              className={item.cName}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {item.title}
             </Link>
           </li>

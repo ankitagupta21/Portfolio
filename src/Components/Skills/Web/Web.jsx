@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 const Web = () => {
   const location = useLocation();
   const path = location.pathname;
-  const hide = path === "/work/WebDevelopment" ? "hide" : "more";
+  const hide = path === "/explore/WebDevelopment" ? "hide" : "more";
   return (
     <div className="container">
       <div className="w-left">
@@ -24,15 +24,16 @@ const Web = () => {
             <div className="green"></div>
           </div>
           <div className="para">
-            Experience (at a startup) in building, and implementing web
-            application with React.js.
+            Frontend work in React.js at GoodLives, cutting page load time by
+            10%.
           </div>
           <div className="para">
-            Build web applications using MERN stack and Flask framework.
+            Full-stack apps with Spring Boot, Node.js, React, PostgreSQL, and
+            MongoDB, from REST APIs to Dockerized services.
           </div>
         </div>
         <div className={hide}>
-          <Link to="/work/WebDevelopment">Show More</Link>
+          <Link to="/explore/WebDevelopment">Show More</Link>
         </div>
       </div>
     </div>

@@ -1,14 +1,19 @@
 import React from "react";
+import CardSection from "../../Components/Cards/CardSection";
+import {
+  certificateCards,
+  prototypeCards,
+} from "../../Components/Cards/cardData";
+import pro from "../../img/pro.png";
+import cer from "../../img/cer.png";
 import Design from "../../Components/Skills/Design/Design";
 import sq12 from "../../img/sq12.png";
 import sq22 from "../../img/sq22.png";
-import Pro from "../../Components/Prototypes/Prototype";
-import Cer from "../../Components/Certificates/Certificate";
 import design1 from "../../img/design1.png";
 import design2 from "../../img/design2.png";
 import "./DesignS.css";
 
-const prototypes = [
+export const prototypes = [
   {
     id: 1,
     name: "Expense Tracker",
@@ -22,7 +27,7 @@ const prototypes = [
     img: design2,
   },
 ];
-const certificates = [
+export const certificates = [
   {
     id: 1,
     name: "Foundations of User Experience (UX) Design",
@@ -35,7 +40,7 @@ const certificates = [
     id: 2,
     name: "Start the UX Design Process: Empathize, Define, and Ideate",
     link: "https://coursera.org/share/6415261b49ebf954a706d3c63aa8e49d",
-    date: "June 2022",
+    date: "Jun 2022",
     organization: "Coursera",
     skills: [],
   },
@@ -43,7 +48,7 @@ const certificates = [
     id: 3,
     name: "Build Wireframes and Low-Fidelity Prototypes",
     link: "https://coursera.org/share/e4027e86038760988b32d63722124b10",
-    date: "July 2022",
+    date: "Jul 2022",
     organization: "Coursera",
     skills: [],
   },
@@ -51,7 +56,7 @@ const certificates = [
     id: 4,
     name: "Conduct UX Research and Test Early Concepts",
     link: "https://coursera.org/share/846d1ae09bfa06103d96d54d51270b92",
-    date: "September 2022",
+    date: "Sep 2022",
     organization: "Coursera",
     skills: [],
   },
@@ -62,8 +67,16 @@ function DesignS() {
       <img src={sq12} className="sq1 de" alt="" />
       <img src={sq22} className="sq2 de" alt="" />
       <Design />
-      <Pro prototypes={prototypes} />
-      <Cer certificates={certificates} />
+      <CardSection
+        heading="Prototypes"
+        icon={pro}
+        cards={prototypeCards(prototypes)}
+      />
+      <CardSection
+        heading="Certifications"
+        icon={cer}
+        cards={certificateCards(certificates)}
+      />
     </div>
   );
 }

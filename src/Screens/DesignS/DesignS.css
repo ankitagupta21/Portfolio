@@ -1,20 +1,19 @@
 .sq1.de{
-    top:15vw;
-    left:74vw;
-    width:26vw;
+    top:calc(15 * var(--vw));
+    width:calc(26 * var(--vw));
     overflow: hidden;
 }
 .sq2.de{
-    top:102vw;
-    right:80vw;
+    top:calc(102 * var(--vw));
+    right:calc(80 * var(--vw));
 }
 
 @media screen and (max-width: 750px) {
     .sq1.de{
-        top:36vw;
+        top:calc(36 * var(--vw));
     }
     .sq2.de{
-        top:118vw;
+        top:calc(118 * var(--vw));
     }
     
 }

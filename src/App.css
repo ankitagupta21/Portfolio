@@ -12,12 +12,19 @@
   --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
   --orangeCard: rgba(252, 166, 31, 0.45);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --accent: rgb(53, 126, 245);
+  /* Sizes scale with the viewport up to the max page width, then stay fixed. */
+  --max-width: 1280px;
+  --vw: min(1vw, calc(var(--max-width) / 100));
 }
 
 .App{
   color: var(--white);
   background-color: var(--black);
   font-family: 'Inter', sans-serif;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
 }
 @font-face {
   font-family: 'Montserrat';
@@ -37,24 +44,24 @@
 }
 @font-face {
   font-family: 'Inter';
-  src: local('Inconsolata'), url('../src/fonts/Inter/static/Inter-Bold.ttf') format('truetype');
+  src: local('Inter Bold'), local('Inter-Bold'), url('../src/fonts/Inter/static/Inter-Bold.ttf') format('truetype');
 }
 .container{
   display: flex;
   flex-direction: row;
-  margin: 15vw 2vw;
+  margin: calc(15 * var(--vw)) calc(2 * var(--vw));
   justify-content: space-between;
 }
 
 .box1{
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: calc(50 * var(--vw));
   border-width: 2px;
   border-style: solid;
-  border-radius: 2vw;
+  border-radius: calc(2 * var(--vw));
   height: auto;
-  padding-bottom: 2vw;
+  padding-bottom: calc(2 * var(--vw));
   background-color: #030303;
 }
 .box1:hover{
@@ -68,49 +75,49 @@
   border-width: 0px;
   border-bottom-width: 2px;
   border-style: solid;
-  height:4.5vw;
+  height:calc(4.5 * var(--vw));
   align-items: flex-start;
 }
 
 .red{
   background-color: var(--red);
-  width: 1.6vw;
-  height: 1.6vw;
-  border-radius: 0.8vw;
+  width: calc(1.6 * var(--vw));
+  height: calc(1.6 * var(--vw));
+  border-radius: calc(0.8 * var(--vw));
   align-self: center;
-  margin: 0vw 2vw 0px 2.5vw;
+  margin: calc(0 * var(--vw)) calc(2 * var(--vw)) 0px calc(2.5 * var(--vw));
 }
 .yellow{
   background-color: var(--yellow);
-  width: 1.6vw;
-  height: 1.6vw;
-  border-radius: 0.8vw;
+  width: calc(1.6 * var(--vw));
+  height: calc(1.6 * var(--vw));
+  border-radius: calc(0.8 * var(--vw));
   align-self: center;
-  margin-right: 2vw;
+  margin-right: calc(2 * var(--vw));
 }
 .green{
   background-color: var(--green);
-  width: 1.6vw;
-  height: 1.6vw;
-  border-radius: 0.8vw;
+  width: calc(1.6 * var(--vw));
+  height: calc(1.6 * var(--vw));
+  border-radius: calc(0.8 * var(--vw));
   align-self: center;
 }
 .para{
   font-family: "Inconsolata-Medium", monospace;
-  font-size: 2.5vw;
+  font-size: calc(2.5 * var(--vw));
   color: #fff;
-  padding:2vw 2.5vw 1vw 2.5vw;
+  padding:calc(2 * var(--vw)) calc(2.5 * var(--vw)) calc(1 * var(--vw)) calc(2.5 * var(--vw));
   line-height: 1.5;
 }
 .s-heading{
   font-family: "Montserrat-Medium",sans-serif;
-  font-size: 4vw;
+  font-size: calc(4 * var(--vw));
   color: #fff;
 }
 .more{
   font-family: "Montserrat-Medium", sans-serif;
-  margin-top: 3vw;
-  font-size: 2.5vw;
+  margin-top: calc(3 * var(--vw));
+  font-size: calc(2.5 * var(--vw));
 }
 
 .more a{
@@ -123,33 +130,35 @@
 }
 
 .sub-container{
-  padding: 0vw 4vw;
+  padding: calc(0 * var(--vw)) calc(4 * var(--vw));
   position: relative;
   z-index: 0;
-  margin-top: -12vw;
+  overflow-y: clip;
+  margin-top: calc(-12 * var(--vw));
 }
 .sub-container1{
   display: flex;
   flex-direction: row;
-  margin: 15vw 2vw;
+  margin: calc(15 * var(--vw)) calc(2 * var(--vw));
 }
 .sq1{
   position: absolute;
-  top:11vw;
-  left:62vw;
-  width: 38vw;
+  top:calc(11 * var(--vw));
+  /* The artwork is cut off on its right side: pin it to the screen edge (not the centered page) so the cut stays off-screen. */
+  right: calc((100% - 100vw) / 2);
+  width: calc(38 * var(--vw));
   z-index: -1;
 }
 .sub-img{
-  height:40vw;
+  height:calc(40 * var(--vw));
 }
 .sub-right{
-  margin-top: 1.8vw;
-  margin-left: 4vw;
+  margin-top: calc(1.8 * var(--vw));
+  margin-left: calc(4 * var(--vw));
 }
 .sub-heading{
   font-family: "Montserrat-Medium",sans-serif;
-  font-size: 4vw;
+  font-size: calc(4 * var(--vw));
   color: #fff;
 }
 .skills{
@@ -159,65 +168,97 @@
 }
 .skill{
   border-radius: 15px;
-  margin-right: 2vw;
-  margin-bottom: 2vw;
-  font-size: 2.5vw;
+  margin-right: calc(2 * var(--vw));
+  margin-bottom: calc(2 * var(--vw));
+  font-size: calc(2.5 * var(--vw));
   display: flex;
   justify-content: center;
   align-items: center;
-  height:4vw;
-  padding: 0vw 2vw;
+  height:calc(4 * var(--vw));
+  padding: calc(0 * var(--vw)) calc(2 * var(--vw));
   font-family: "Inconsolata-Medium", monospace;
 }
 .sq2{
   position: absolute;
-  top:192vw;
-  right:80vw;
-  width: 50vw;
+  top:calc(192 * var(--vw));
+  right:calc(80 * var(--vw));
+  width: calc(50 * var(--vw));
   z-index: -1;
 }
 
 @media screen and (max-width: 750px) {
   .container{
-    margin:15vw 0vw;
+    margin:calc(15 * var(--vw)) calc(0 * var(--vw));
   }
   .box1{
-    width:54vw;
+    width:calc(54 * var(--vw));
   }
   .box2{
-    height:5.5vw;
+    height:calc(5.5 * var(--vw));
   }
   .para{
     font-family: "Inconsolata-Medium", monospace;
-    font-size: 3.2vw;
+    font-size: calc(3.2 * var(--vw));
     color: #fff;
-    padding:2vw 1.4vw 1vw 1.4vw;
+    padding:calc(2 * var(--vw)) calc(1.4 * var(--vw)) calc(1 * var(--vw)) calc(1.4 * var(--vw));
     line-height: 1.2;
   }
   .s-heading{
-    font-size: 4.2vw;
+    font-size: calc(4.2 * var(--vw));
   }
   .more{
-    font-size: 3vw;
+    font-size: calc(3 * var(--vw));
   }
   
   
   .sub-container{
-    margin-top: -8vw;
+    margin-top: calc(-8 * var(--vw));
   }
   .sub-container1{
-    margin: 15vw 0vw;
+    margin: calc(15 * var(--vw)) calc(0 * var(--vw));
   }
   .skill{
-    margin-bottom: 2vw;
-    font-size: 3vw;
+    margin-bottom: calc(2 * var(--vw));
+    font-size: calc(3 * var(--vw));
   }
   
   .sq1{
-    top: 36vw;
+    top: calc(36 * var(--vw));
   }
   .sq2{
-    top: 231vw;
+    top: calc(231 * var(--vw));
     
+  }
+}
+.metric{
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Decorative background shapes drift gently; each gets its own timing so they don't move in sync. */
+.sq1,
+.sq2{
+  animation: float 9s ease-in-out infinite alternate;
+}
+.sq2{
+  animation-duration: 11s;
+  animation-delay: -4s;
+}
+.sq1.home.th{
+  animation-duration: 13s;
+  animation-delay: -7s;
+}
+@keyframes float{
+  from{
+    transform: translateY(-14px) rotate(-1.5deg);
+  }
+  to{
+    transform: translateY(14px) rotate(1.5deg);
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .sq1,
+  .sq2{
+    animation: none;
   }
 }

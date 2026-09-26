@@ -1,35 +1,35 @@
 .a-heading{
-  margin-top: 4vw;
+  margin-top: calc(4 * var(--vw));
 }
 .a-image{
     margin-top: 40px;
-    width: 36vw;
+    width: calc(36 * var(--vw));
     margin-left: -10px;
 }
 .an-image{
     margin-bottom: -4px;
-    margin-left: 1.2vw;
-    width:12vw;
+    margin-left: calc(1.2 * var(--vw));
+    width:calc(12 * var(--vw));
 }
 .a-right{
-    margin-left: 6vw;
+    margin-left: calc(6 * var(--vw));
 }
 .a-image{
     display: flex;
     flex-direction: row;
-    margin-top: 8vw;
+    margin-top: calc(8 * var(--vw));
 }
 .f-image{
-    margin-top: 1.8vw;
-    width: 10vw;
-    height: 16vw;
+    margin-top: calc(1.8 * var(--vw));
+    width: calc(10 * var(--vw));
+    height: calc(16 * var(--vw));
     margin-left: 20px;
 }
 .r-image{
-    margin-top: -5vw;
-    width: 14vw;
-    height: 14vw;
-    margin-left:3vw;
+    margin-top: calc(-5 * var(--vw));
+    width: calc(14 * var(--vw));
+    height: calc(14 * var(--vw));
+    margin-left:calc(3 * var(--vw));
 }
 
 .f-image:hover{
@@ -40,12 +40,12 @@
 }
 @media screen and (max-width:750){
     .f-image{
-        margin-top: 3vw;
+        margin-top: calc(3 * var(--vw));
         margin-left: 30px;
     }
     .r-image{
-        margin-top: 0vw;
+        margin-top: calc(0 * var(--vw));
         
-        margin-left:3vw;
+        margin-left:calc(3 * var(--vw));
     }
 }
